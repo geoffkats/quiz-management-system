@@ -1,0 +1,486 @@
+.admin-container {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.admin-nav {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-nav h1 {
+    margin: 0;
+    color: white;
+}
+
+.admin-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin-content {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.admin-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.admin-card h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.stat-row:last-child {
+    border-bottom: none;
+}
+
+.card-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.admin-actions {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.active-sessions {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sessions-list {
+    margin-top: 1rem;
+}
+
+.session-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.session-item:last-child {
+    border-bottom: none;
+}
+
+.btn-warning {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-warning:hover {
+    background-color: #c0392b;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Admin Forms */
+.admin-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-row {
+    margin-bottom: 1.5rem;
+}
+
+.form-row label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-row textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Tables */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 1rem;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.admin-table th {
+    background: #f8f9fa;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.admin-table tr:hover {
+    background: #f8f9fa;
+}
+
+/* Page Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Division Selector Tabs */
+.division-selector {
+    display: flex;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+
+.btn-tab {
+    padding: 8px 16px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-tab.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-tab:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.status-badge.ready {
+    background-color: #d4edda;
+    color: var(--success-color);
+}
+
+.status-badge.not-ready {
+    background-color: #f8d7da;
+    color: var(--error-color);
+}
+
+/* Success Message */
+.success-message {
+    background-color: #d4edda;
+    color: var(--success-color);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* Table Container */
+.table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+}
+
+/* Code Display */
+code {
+    background: #f8f9fa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: flex-end;
+}
+
+/* No Results Message */
+.no-results {
+    text-align: center;
+    color: #6c757d;
+    padding: 2rem;
+    font-style: italic;
+}
+
+/* Question Management */
+.questions-table td {
+    vertical-align: top;
+}
+
+.options-list {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.options-list div {
+    padding: 4px 8px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.question-form textarea {
+    min-height: 120px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Results Page */
+.session-filter {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.filter-form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filter-form label {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.filter-form select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 200px;
+}
+
+.results-table td:first-child {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.results-table td:nth-child(4) {
+    font-weight: bold;
+}
+
+/* Top 3 Rankings */
+.results-table tr:nth-child(1) td:first-child {
+    color: gold;
+}
+
+.results-table tr:nth-child(2) td:first-child {
+    color: silver;
+}
+
+.results-table tr:nth-child(3) td:first-child {
+    color: #cd7f32;
+}
+
+/* Category Management */
+.division-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.division-both {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.division-junior {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.division-senior {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+
+.question-count {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.question-count:hover {
+    text-decoration: underline;
+}
+
+.empty-count {
+    color: #6c757d;
+    font-style: italic;
+}
+
+.categories-table td {
+    vertical-align: middle;
+}
+
+.categories-table .actions {
+    white-space: nowrap;
+    text-align: right;
+}
+
+.categories-table .actions form {
+    margin-left: 0.5rem;
+}
+
+/* Question Filtering */
+.filter-section {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: #333;
+}
+
+.filter-group select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    min-width: 150px;
+}
+
+.question-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.question-category {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.question-id {
+    color: #666;
+    font-weight: 500;
+}
+
+.no-category {
+    color: #6c757d;
+    font-style: italic;
+}
+
+.correct-option {
+    background-color: #d4edda !important;
+    border-left: 3px solid var(--success-color);
+}
+
+.correct-marker {
+    color: var(--success-color);
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
